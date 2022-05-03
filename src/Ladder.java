@@ -1,0 +1,52 @@
+public class Ladder {
+    private int ladderLength;
+    private int ladderbase;
+    public Ladder (String length,String squrenumber )
+    {
+        ladderLength=length;
+        ladderbase=squrenumber;
+    }
+    public int getLadderLength()
+    {
+        return ladderLength;
+    }
+    public int getLadderbase()
+    {
+        return ladderbase;
+    }
+
+    public  static boolean LegalLadder(Ladder ladder, int[]snakeBoard, int[]ladderBoard)
+    {
+
+        if((ladder.ladderbase>100)||(ladder.ladderbase<1))
+        {
+            System.out.println("The square is not within the board's boundaries!");
+            return false;
+        }
+
+        if (ladder.ladderbase+ ladder.ladderLength>100)
+        {
+            System.out.println("The ladder is too long!");
+        }
+        if(ladderBoard[ladder.ladderbase]%2!=0)
+        {
+            System.out.println("This square already contains a bottom of a ladder!");
+            return false;
+        }
+
+        if (snakeBoard[ladder.ladderbase]%2!=0)
+        {
+            System.out.println("This square contains a head of a snake!");
+            return false;
+        }
+
+        return true;
+
+    }
+    public static void add_ladder(int []ladderBoard,int counter,Ladder ladder)
+    {
+        ladderBoard[ladder.ladderbase=counter;
+        ladderBoard[ladder.ladderbase+ ladder.ladderLength]=counter+1;
+    }
+
+}
