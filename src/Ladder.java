@@ -1,7 +1,7 @@
 public class Ladder {
     private int ladderLength;
     private int ladderbase;
-    public Ladder (String length,String squrenumber )
+    public Ladder (int length,int  squrenumber )
     {
         ladderLength=length;
         ladderbase=squrenumber;
@@ -15,7 +15,7 @@ public class Ladder {
         return ladderbase;
     }
 
-    public  static boolean LegalLadder(Ladder ladder, int[]snakeBoard, int[]ladderBoard)
+    public  static boolean LegalLadder(Ladder ladder, Snake []snakeBoard, Ladder[]ladderBoard)
     {
 
         if((ladder.ladderbase>100)||(ladder.ladderbase<1))
@@ -28,13 +28,13 @@ public class Ladder {
         {
             System.out.println("The ladder is too long!");
         }
-        if(ladderBoard[ladder.ladderbase]%2!=0)
+        if(ladderBoard[ladder.ladderbase]!=null)
         {
             System.out.println("This square already contains a bottom of a ladder!");
             return false;
         }
 
-        if (snakeBoard[ladder.ladderbase]%2!=0)
+        if (snakeBoard[ladder.ladderbase]!=null)
         {
             System.out.println("This square contains a head of a snake!");
             return false;
@@ -43,10 +43,6 @@ public class Ladder {
         return true;
 
     }
-    public static void add_ladder(int []ladderBoard,int counter,Ladder ladder)
-    {
-        ladderBoard[ladder.ladderbase=counter;
-        ladderBoard[ladder.ladderbase+ ladder.ladderLength]=counter+1;
-    }
+
 
 }
