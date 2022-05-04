@@ -79,8 +79,5 @@ public class SnakesAndLaddersGame {
             ex.printStackTrace();
         }
     }
-    public static int diecube()
-    {
-
-    }
 }
+
