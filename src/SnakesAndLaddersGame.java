@@ -28,8 +28,8 @@ public class SnakesAndLaddersGame {
     }
 
     public static void initializeGame() {
-        Snake[] snakeboard = new Snake[100];
-        Ladder[] ladderboard = new Ladder[100];
+        Snake[] snakeboard = new Snake[101];
+        Ladder[] ladderboard = new Ladder[101];
         int[] numbers = new int[2];
         int counter1 = 1;
         int counter2 = 1;

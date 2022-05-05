@@ -22,7 +22,7 @@ public class Snake {
           System.out.println("The square is not within the board's boundaries!");
           return false;
       }
-      if(snake.snakeHead==99)
+      if(snake.snakeHead==100)
       {
           System.out.println("You cannot add a snake in the last square!");
           return false;
